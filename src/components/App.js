@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import KegControl from "./KegControl";
 import { MDBContainer} from "mdbreact";
+import './../App.css';
 
 function App(){
   return (
