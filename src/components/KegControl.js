@@ -44,7 +44,7 @@ class KegControl extends React.Component {
     if (keg.pints > 1){
     keg.pints -= 1;
     } else {
-      keg.pints = "cached";
+      keg.pints = "empty";
     }
     const editedMasterKegList = this.state.masterKegList
     .filter(keg => keg.id !== this.state.selectedKeg.id)
