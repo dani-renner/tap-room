@@ -3,6 +3,8 @@
 
 ### Independent project for Epicodus by Dani Renner
 
+![](src/img/structureDiagram.png)
+
 ## Description
 
 This application allows users to create and update a list of kegs.
