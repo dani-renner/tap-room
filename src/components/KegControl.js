@@ -41,8 +41,10 @@ class KegControl extends React.Component {
   handleDecrease = () => {
     const keg = this.state.masterKegList.filter(keg => keg.id === this.state.selectedKeg.id)[0];
     parseInt(keg.pints);
-    if (keg.pints > 0){
+    if (keg.pints > 1){
     keg.pints -= 1;
+    } else {
+      keg.pints = "cached";
     }
     const editedMasterKegList = this.state.masterKegList
     .filter(keg => keg.id !== this.state.selectedKeg.id)
