@@ -20,7 +20,7 @@ This application allows users to create and update a list of kegs.
 
 2. Once you have chosen your desired directory, clone the github repo using the version control tool `git` (<a href="https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github">download instructions</a>). Type the following command into your terminal:
 ```bash
-$ git clone https://github.com/dani-renner/tap-room
+$ git clone https://github.com/dani-renner/tap-room.git
 ```
 3. Open the project in VSCode by typing the following in your terminal:
 
