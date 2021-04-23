@@ -1,6 +1,6 @@
 import React from 'react';
 
-class TicketControl extends React.Component {
+class KegControl extends React.Component {
 
   constructor(props) {
     super(props);
@@ -20,4 +20,4 @@ class TicketControl extends React.Component {
     );
   }
 }
-export default TicketControl;
+export default KegControl;
