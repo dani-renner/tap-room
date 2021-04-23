@@ -8,7 +8,7 @@ function NewKegForm(props){
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({name: event.target.name.value, brewer: event.target.brewer.value, price: event.target.price.value, id: v4()});
+    props.onNewKegCreation({name: event.target.name.value, brewer: event.target.brewer.value, price: event.target.price.value, abv: event.target.abv.value, id: v4()});
   }
 
   return (
