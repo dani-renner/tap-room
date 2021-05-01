@@ -18,7 +18,6 @@ This application allows users to create and update a list of kegs.
 * Babel
 * MDB
 * git
-* Redux
 
 ## Installation Instructions
 1. Navigate to the desired directory where you would like to clone the project.
