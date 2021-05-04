@@ -44,44 +44,45 @@ class KegControl extends React.Component {
     dispatch(action2);
   }
 
-  // handleDecrease = () => {
-  //   const keg = this.state.masterKegList.filter(keg => keg.id === this.state.selectedKeg.id)[0];
-  //   parseInt(keg.pints);
-  //   if (keg.pints > 1){
-  //   keg.pints -= 1;
-  //   } else {
-  //     keg.pints = "empty";
-  //   }
-  //   const editedMasterKegList = this.state.masterKegList
-  //   .filter(keg => keg.id !== this.state.selectedKeg.id)
-  //   .concat(keg);
-  //   this.setState({
-  //     masterKegList: editedMasterKegList,
-  //   });
-  // }
+  handleDecrease = (id) => {
+    const { dispatch } = this.props;
+    const keg = this.props.masterKegList[id];
+    parseInt(keg.pints);
+    if (keg.pints > 1){
+    keg.pints -= 1;
+    } else {
+      keg.pints = "empty";
+    }
+    // const objArray = Object.entries(masterKegList);
+    // const newArray = objArray.filter(([key, value]) => value.id !== id);
+    // const editedMasterKegList =  keg => keg.id !== this.state.selectedKeg.id);
+    // this.setState({
+    //   masterKegList: editedMasterKegList,
+    // });
+  }
 
-  // handleEditClick = () => {
-  //   this.setState({editing: true});
-  // }
+  handleEditClick = () => {
+    this.setState({editing: true});
+  }
 
-  // handleEditingKegInList = (kegToEdit) => {
-  //   const { dispatch } = this.props;
-  //   const { name, brewer, price, abv, pints, id } = kegToEdit;
-  //   const action = {
-  //     type: 'ADD_KEG',
-  //     id: id,
-  //     name: name,
-  //     brewer: brewer,
-  //     price: price,
-  //     abv: abv,
-  //     pints: pints
-  //   }
-  //   dispatch(action);
-  //   this.setState({
-  //     editing: false,
-  //     selectedKeg: null
-  //   });
-  // }
+  handleEditingKegInList = (kegToEdit) => {
+    const { dispatch } = this.props;
+    const { name, brewer, price, abv, pints, id } = kegToEdit;
+    const action = {
+      type: 'ADD_KEG',
+      id: id,
+      name: name,
+      brewer: brewer,
+      price: price,
+      abv: abv,
+      pints: pints
+    }
+    dispatch(action);
+    this.setState({
+      editing: false,
+      selectedKeg: null
+    });
+  }
   
   render(){
     let currentlyVisibleState = null;
@@ -116,7 +117,7 @@ KegControl.propTypes = {
 const mapStateToProps = state => {
   return {
     masterKegList: state.masterKegList,
-    formVisibleOnPage: state.formVisibleOnPage,
+    formVisibleOnPage: state.formVisibleOnPage
   }
 }
 

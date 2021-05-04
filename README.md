@@ -56,6 +56,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Known Bug
+
+Decrease Pint function for selling pints is broken right now, as I am working on handling state with redux.
+
 ## License
 > [MIT](https://opensource.org/licenses/MIT) 
 > Dani Renner &copy; 2021  
